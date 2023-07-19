@@ -20,6 +20,7 @@
 body {
     font-size: var(--fs-6);
     font-family: "Work Sans", sans-serif;
+    color: #534C64;
 }
 
 ul {
@@ -67,8 +68,21 @@ img {
     color: var(--c-secondary);
 }
 
+.header-text {
+    font-size: var(--fs-2);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.header-text-c {
+    background: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
+    background-clip: text;
+    color: transparent;
+}
+
 .btn-primary,
-.btn-secondary {
+.btn-secondary,
+.btn-tertiary {
     padding: 15px 35px;
     border-radius: 45px;
     font-weight: 600;
@@ -85,6 +99,11 @@ img {
 
 .btn-secondary {
     background-color: #4EC5F7;
+}
+
+.btn-tertiary {
+    color: var(--c-primary);
+    background-color: var(--c-quaternary);
 }
 
 /* Header Styles */
@@ -133,9 +152,6 @@ nav {
 }
 
 .main-banner-content h1 {
-    background: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
-    background-clip: text;
-    color: transparent;
     font-size: var(--fs-1);
     text-transform: uppercase;
     margin-bottom: 30px;
@@ -149,18 +165,258 @@ nav {
     padding-bottom: 15px;
 }
 
+/* Main */
+/* - Gamer Styles */
+.gamer {
+    padding: 50px 0;
+    background: linear-gradient(90deg, rgba(255, 66, 165, 0.03) 0%, rgba(255, 66, 165, 0.03) 100%);
+}
+
+.gamer-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: calc(var(--gap) * 3);
+}
+
+.gamer-img {
+    width: calc(60% - calc(var(--gap) * 3));
+}
+
+.gamer-content {
+    width: 40%;
+    text-align: end;
+}
+
+.gamer-content > p {
+    margin-bottom: 20px;
+}
+
+.gamer-content blockquote {
+    padding-top: 20px;
+}
+
+.gamer-content blockquote q {
+    font-size: var(--fs-4);
+    font-weight: 700;
+}
+
+/* - Videos Styles */
+.videos {
+    padding: 70px 0;
+}
+
+.videos h2 {
+    color: var(--c-tertiary);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.videos h2 ~ p {
+    font-size: var(--fs-6);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.videos-wrap {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: calc(var(--gap) * 2);
+}
+
+.video a {
+    display: block;
+    position: relative;
+    margin-bottom: 15px;
+    border: 3px solid transparent;
+    border-radius: 18px;
+}
+
+.video a > img {
+    width: 100%;
+    display: block;
+}
+
+.video a > div {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+}
+
+.video a:hover {
+    border-color: var(--c-primary);
+}
+
+.video a:hover > div {
+    opacity: 1;
+}
+
+.video a > div img {
+    width: 40px;
+    height: 40px;
+}
+
+.video a > div p {
+    color: var(--c-primary);
+    font-weight: 600;
+    font-size: var(--fs-5);
+    padding-top: 10px;
+}
+
+/* Info Styles */
+.info {
+    padding-bottom: 70px;
+}
+
+.info-wrap {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: calc(var(--gap) *3);
+}
+
+.info-img {
+    width: calc(60% - calc(var(--gap) * 3));
+    position: relative;
+    padding-bottom: 150px;
+}
+
+.info-img img:first-child {
+    width: 100%;
+    max-width: 90%;
+}
+
+.info-img img:last-child {
+    position: absolute;
+    right: 0;
+    bottom: 50px;
+    z-index: 9;
+    max-width: 250px;
+}
+
+.info-content {
+    width: 35%;
+    padding-left: 50px;
+}
+
+.info-content h2 {
+    color: var(--c-secondary);
+    margin-bottom: 10px;
+}
+
+/* Careers Styles */
+.careers {
+    background-image: linear-gradient(90deg, #FF42A5 0%, #FF42A5 100%);
+    padding: 70px 0;
+}
+
+.careers-wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: calc(var(--gap) * 4);
+    align-items: center;
+}
+
+.careers-content {
+    color: var(--c-quaternary);
+}
+
+.careers-content h2 {
+    margin-bottom: 10px;
+}
+
+.careers-content p {
+    margin-bottom: 20px;
+}
+
+.careers-content table {
+    font-size: var(--fs-5);
+    width: 100%;
+    border: 0;
+    margin-bottom: 20px;
+}
+
+.careers-content table td {
+    padding-bottom: 10px;
+}
+
+.careers-content table td:last-child {
+    text-align: end;
+}
+
+.careers-img img {
+    width: 100%;
+    display: block;
+}
+
+/* Games Category Styles */
+.games-category {
+    padding: 70px 0;
+}
+
+.games-category-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.category {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 5px 8px;
+    border-radius: 50px;
+    border: 2px solid transparent;
+}
+
+.category:hover {
+    border-color: var(--c-primary);
+}
+
+/* Footer Styles */
+footer {
+
+}
+
 /* Responsive Styles */
-@media (min-width: 99px) {
+@media (min-width: 992px) {
     .main-banner {
         background-image: url("images/img-14.png");
         background-size: 48% 100%;
         background-repeat: no-repeat;
         background-position: left center;
     }
+
+    .careers {
+        background-image: url("images/img-16.png"), linear-gradient(90deg, #FF42A5 0%, #FF42A5 100%);
+        background-size: 50% 100%, 100%;
+        background-repeat: no-repeat;
+        background-position: right center, center;
+    }
+
+    .careers-img img {
+        opacity: 0;
+    }
 }
 
 @media (max-width: 992px) {
-    .nav-items {
+    .nav-items,
+    .gamer-wrap {
         flex-direction: column;
     }
     
@@ -183,14 +439,50 @@ nav {
         order: 2;
         padding: 50px 0;
     }
+
+    .gamer-img,
+    .gamer-content,
+    .info-img,
+    .info-content {
+        max-width: 600px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .info-content {
+        order: 1;
+        padding-left: 0;
+    }
+
+    .info-img {
+        order: 2;
+    }
+
+    .info-img img:first-child {
+        max-width: 80%;
+    }
+
+    .careers-wrap {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (min-width: 576px) and (max-width: 992px) {
-
+    .videos-wrap {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 576px) {
     .nav-items .nav-list {
         flex-direction: column;
+    }
+
+    .videos-wrap {
+        grid-template-columns:1fr;
+    }
+
+    .info-img img:last-child {
+        max-width: 180px;
     }
 }
