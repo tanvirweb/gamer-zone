@@ -537,4 +537,8 @@ footer p {
     .info-img img:last-child {
         max-width: 180px;
     }
+
+    .category {
+        flex: 1 0 41%;
+    }
 }
