@@ -390,7 +390,34 @@ nav {
 
 /* Footer Styles */
 footer {
+    background-color: #0B0223;
+    padding: 70px 0;
+    color: var(--c-quaternary);
+}
 
+footer :where(.logo, .nav-list) {
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+footer .nav-list a {
+    color: var(--c-quaternary);
+}
+
+footer .nav-list i {
+    font-size: var(--fs-3);
+}
+
+footer p,
+footer .nav-list:last-of-type a {
+    color: rgba(255, 255, 255, 0.60);
+    color: rgba(255, 255, 255, 0.60);
+    font-size: 1rem;
+}
+
+footer p {
+    text-align: center;
+    margin-top: -15px;
 }
 
 /* Responsive Styles */
@@ -464,6 +491,29 @@ footer {
 
     .careers-wrap {
         grid-template-columns: 1fr;
+    }
+
+    footer .nav-list {
+        flex-wrap: wrap;
+        max-width: 600px;
+        margin: 0 auto 30px;
+    }
+
+    footer .nav-list > li {
+        width: 30%;
+        text-align: center;
+    }
+
+    footer .nav-list:last-of-type > li {
+        width: 45%;
+    }
+
+    footer p {
+        margin-top: 0;
+    }
+
+    footer .full-size {
+        display: block;
     }
 }
 
